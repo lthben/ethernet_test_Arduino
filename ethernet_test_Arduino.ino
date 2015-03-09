@@ -8,7 +8,7 @@
 #define NUM_LEDS 10 //number of neo pixels
 #define PORT 10002 //port number
 
-byte server[] = {192, 168, 3, 173}; //PLEASE CHECK ipconfig of server for the IP address
+byte server[] = {192, 168, 3, 160}; //PLEASE CHECK ipconfig of server for the IP address
 EthernetClient client;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, PIXEL_PIN, NEO_GRB + NEO_KHZ800);
@@ -89,6 +89,7 @@ void setup() {
 void loop() {
 
   if (is_connected) {
+    
     //read from knob
     pot_value = analogRead(POT_PIN);
 
